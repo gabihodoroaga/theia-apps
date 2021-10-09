@@ -5,7 +5,7 @@ FROM node:$NODE_VERSION-alpine as theia
 ARG GITHUB_TOKEN
 ARG version=latest
 
-RUN apk add --no-cache make pkgconfig gcc g++ python libx11-dev libxkbfile-dev
+RUN apk add --no-cache make pkgconfig gcc g++ python libx11-dev libxkbfile-dev libsecret-dev
 
 WORKDIR /home/theia
 
