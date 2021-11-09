@@ -7,7 +7,7 @@ ARG NODE_VERSION=12.18.3
 ENV THEIA_RUST_APP_PATH /root/theia_rust_app
 
 RUN apt-get update -yq \
-    && apt-get install curl gnupg build-essential gcc g++ gdb make python sudo git -yq
+    && apt-get install curl gnupg build-essential gcc g++ gdb make python sudo git -yq libsecret-1-dev
 
 # allow a user to become root in the container
 ADD sudoers /etc/sudoers
@@ -24,9 +24,6 @@ ARG GITHUB_TOKEN
 RUN mkdir $THEIA_RUST_APP_PATH
 RUN . /root/nvm_setup.sh && cd $THEIA_RUST_APP_PATH && yarn global add node-gyp
 ADD next.package.json $THEIA_RUST_APP_PATH/package.json
-RUN git clone https://github.com/eclipse-theia/theia-cpp-extensions.git /root/theia-cpp-extension
-RUN cp -R /root/theia-cpp-extension/packages $THEIA_RUST_APP_PATH/.
-RUN cp -Rv /root/theia-cpp-extension/dev-packages/* $THEIA_RUST_APP_PATH/packages/.
 RUN . /root/nvm_setup.sh && cd $THEIA_RUST_APP_PATH && yarn --cache-folder $THEIA_RUST_APP_PATH/ycache && \
     . /root/nvm_setup.sh && cd $THEIA_RUST_APP_PATH && NODE_OPTIONS="--max_old_space_size=4096" yarn theia build && \
     . /root/nvm_setup.sh && cd $THEIA_RUST_APP_PATH && yarn theia download:plugins && \
@@ -35,7 +32,7 @@ RUN . /root/nvm_setup.sh && cd $THEIA_RUST_APP_PATH && yarn --cache-folder $THEI
 FROM common
 
 RUN apt-get update -yq \
-    && apt-get install -y libsecret-1-dev
+    && apt-get install -y libsecret-1-0
 
 COPY --from=theia /root/theia_rust_app /root/theia_rust_app
 
