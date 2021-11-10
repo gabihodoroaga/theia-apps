@@ -5,7 +5,7 @@ FROM node:$NODE_VERSION-alpine as theia
 ARG version=latest
 
 RUN apk update && \
-    apk add --no-cache make pkgconfig gcc g++ python3 libx11-dev libxkbfile-dev libsecret-dev
+    apk add --no-cache make pkgconfig gcc g++ python3 py3-pip build-base linux-headers libx11-dev libxkbfile-dev libsecret-dev
 
 WORKDIR /home/theia
 

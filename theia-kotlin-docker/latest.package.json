@@ -83,6 +83,7 @@
         "vscode-builtin-node-debug2": "https://open-vsx.org/api/ms-vscode/node-debug2/1.42.1/file/ms-vscode.node-debug2-1.42.1.vsix",
         "vscode-builtin-perl": "https://open-vsx.org/api/vscode/perl/1.45.1/file/vscode.perl-1.45.1.vsix",
         "vscode-builtin-pug": "https://open-vsx.org/api/vscode/pug/1.45.1/file/vscode.pug-1.45.1.vsix",
+        "vscode-builtin-python": "https://open-vsx.org/api/vscode/python/1.45.1/file/vscode.python-1.45.1.vsix",
         "vscode-builtin-scss": "https://open-vsx.org/api/vscode/scss/1.45.1/file/vscode.scss-1.45.1.vsix",
         "vscode-builtin-shaderlab": "https://open-vsx.org/api/vscode/shaderlab/1.45.1/file/vscode.shaderlab-1.45.1.vsix",
         "vscode-builtin-shellscript": "https://open-vsx.org/api/vscode/shellscript/1.45.1/file/vscode.shellscript-1.45.1.vsix",
