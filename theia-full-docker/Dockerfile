@@ -16,6 +16,7 @@ RUN apt-get update && \
                        wget \
                        xz-utils \
                        sudo \
+                       libsecret-1-dev \
     && \
     apt-get clean && \
     apt-get autoremove -y && \
@@ -174,7 +175,7 @@ RUN apt-get update && apt-get -y install openjdk-11-jdk maven gradle
 
 # C/C++
 # public LLVM PPA, development version of LLVM
-ARG LLVM=13
+ARG LLVM=14
 
 RUN wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | apt-key add - && \
     echo "deb http://apt.llvm.org/bionic/ llvm-toolchain-bionic main" > /etc/apt/sources.list.d/llvm.list && \
@@ -287,7 +288,7 @@ WORKDIR /home/theia
 
 COPY --from=theia --chown=theia:theia /home/theia /home/theia
 
-RUN apt-get update && apt-get -y install libsecret-1-dev
+RUN apt-get update && apt-get -y install libsecret-1-0
 
 RUN chmod g+rw /home && \
     mkdir -p /home/project && \
