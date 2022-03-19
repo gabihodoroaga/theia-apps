@@ -68,6 +68,7 @@
         "vscode-builtin-html": "https://open-vsx.org/api/vscode/html/1.48.0-next.4a1bcdafe9/file/vscode.html-1.48.0-next.4a1bcdafe9.vsix",
         "vscode-builtin-html-language-features": "https://open-vsx.org/api/vscode/html-language-features/1.48.0-next.4a1bcdafe9/file/vscode.html-language-features-1.48.0-next.4a1bcdafe9.vsix",
         "vscode-builtin-ini": "https://open-vsx.org/api/vscode/ini/1.45.1/file/vscode.ini-1.45.1.vsix",
+        "vscode-builtin-java": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.45.1-prel/java-1.45.1-prel.vsix",
         "vscode-builtin-javascript": "https://open-vsx.org/api/vscode/javascript/1.45.1/file/vscode.javascript-1.45.1.vsix",
         "vscode-builtin-js-debug": "https://open-vsx.org/api/ms-vscode/js-debug/1.49.8/file/ms-vscode.js-debug-1.49.8.vsix",
         "vscode-builtin-json": "https://open-vsx.org/api/vscode/json/1.46.1/file/vscode.json-1.46.1.vsix",
@@ -106,7 +107,6 @@
         "vscode-editorconfig": "https://open-vsx.org/api/EditorConfig/EditorConfig/0.14.4/file/EditorConfig.EditorConfig-0.14.4.vsix",
         "vscode-eslint": "https://open-vsx.org/api/dbaeumer/vscode-eslint/2.1.1/file/dbaeumer.vscode-eslint-2.1.1.vsix",
         "vscode-references-view": "https://open-vsx.org/api/ms-vscode/references-view/0.0.47/file/ms-vscode.references-view-0.0.47.vsix",
-        "vscode-redhat-java": "https://github.com/redhat-developer/vscode-java/releases/download/v1.0.0/redhat.java-1.0.0.vsix",
         "vscode-kotlin": "https://github.com/fwcd/vscode-kotlin/releases/download/0.2.23/kotlin-refs.tags.0.2.23.vsix"
     }
 }

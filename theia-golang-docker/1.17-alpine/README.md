@@ -3,7 +3,8 @@
 ### Build
 
 ```bash
-docker build -t theiaide/theia-golang:1.13-alpine .
+docker build -t theiaide/theia-golang:1.17-alpine .
+docker tag theiaide/theia-golang:1.17-alpine gabihodoroaga/theia-golang:1.17-alpine
 ```
 
 ### Run

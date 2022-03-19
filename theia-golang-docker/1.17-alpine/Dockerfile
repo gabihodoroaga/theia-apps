@@ -1,11 +1,11 @@
-ARG NODE_VERSION=12.18.3
+ARG NODE_VERSION=14
 
 FROM node:$NODE_VERSION-alpine as theia
 
 ARG GITHUB_TOKEN
 ARG version=latest
 
-RUN apk add --no-cache make pkgconfig gcc g++ python libx11-dev libxkbfile-dev libsecret-dev
+RUN apk add --no-cache make pkgconfig gcc g++ python3 libx11-dev libxkbfile-dev libsecret-dev
 
 WORKDIR /home/theia
 
@@ -33,7 +33,7 @@ RUN apk add --no-cache libsecret git bash curl gcc musl-dev
 
 # install go
 ENV PATH /usr/local/go/bin:$PATH
-ENV GOLANG_VERSION 1.17.2
+ENV GOLANG_VERSION 1.17.8
 
 RUN set -eux; \
 	apk add --no-cache --virtual .fetch-deps gnupg; \
